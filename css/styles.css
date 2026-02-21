@@ -597,6 +597,40 @@ progress {
   content: "— ";
 }
 
+.grand-texte {
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+
+.icon-langue { /* icone pour la section langues */
+  width: 70px;
+  height: auto;
+}
+
+.icon-fr { /* drapeau français */
+  width: 95px !important;
+  height: auto;
+}
+
+.icon-uk {
+  width: 95px !important;
+  height: auto;
+}
+
+.icon-esp {
+  width: 95px !important;
+  height: auto;
+}
+
+.icon-arabe {
+  width: 95px !important;
+  height: auto;
+}
+
+.hobbies {
+  width: 100px !important;
+  height: auto;
+}
+
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -7670,6 +7704,10 @@ textarea.form-control-lg {
   margin-bottom: 3rem !important;
 }
 
+.mb-6 {
+  margin-bottom: 7rem !important;
+}
+
 .mb-auto {
   margin-bottom: auto !important;
 }
@@ -11565,6 +11603,85 @@ html {
   -webkit-text-fill-color: transparent;
 }
 
+.hobbies-section {
+  display: flex;          /* met image et texte sur la même ligne */
+  align-items: flex-start;    /* alignement vertical propre */
+}
+
+.icon-hobbies {
+  width: 80px;            /* taille de l’image */
+  height: auto;
+  flex-shrink: 0;
+}
+
+.titre-hobbies {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.text-hobbies {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.text-gradient-hobbies {
+  background: linear-gradient(315deg, #1e90ff, #333333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column; /* empile verticalement */
+}
+
+.hobbies-list {
+  display: flex;
+  flex-direction: column; /* empile verticalement les hobbies */
+  gap: 15px; /* espace vertical entre chaque hobby */
+}
+
+.hobby-item {
+  display: flex; /* image + texte sur la même ligne */
+  align-items: center;
+  gap: 30px; /* espace horizontal entre image et texte */
+}
+
+.hobby-jeu {
+  width: 60px;
+  height: auto;
+}
+
+.hobby-technologies {
+  max-width: 60px;
+  height: auto;
+}
+
+.hobby-video {
+  width: 60px;
+  height: auto;
+}
+
+.hobby-art {
+  width: 60px;
+  height: auto;
+}
+
+.hobby-nature {
+  width: 60px;
+  height: auto;
+}
+
+.hobby-lecture {
+  width: 60px;
+  height: auto;
+}
+
+.hobby-sports {
+  width: 60px;
+  height: auto;
+}
+
 .rounded-4 {
   border-radius: 1rem !important;
 }
@@ -11579,21 +11696,18 @@ html {
 }
 
 .profile {
-  position: relative;
-  height: 75vw;
-  width: 75vw;
-  border-radius: 5vw;
-  margin-top: 5vw;
-  max-height: 40rem;
-  max-width: 40rem;
+  width: clamp(80px, 30vw, 150px);
+  height: clamp(80px, 30vw, 100px);
+  border-radius: 50%; /* cercle parfait */
+  overflow: hidden; /* découpe l'image aux bords du cercle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .profile .profile-img {
-  height: 80vw;
-  max-height: 45rem;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%; /* couvre entièrement le conteneur */
+  height: 100%;
+  object-fit: cover; /* conserve les proportions et couvre le cercle */
 }
 .profile .dots-1 {
   position: absolute;
@@ -11630,15 +11744,16 @@ html {
 }
 .profile .dots-4 svg {
   fill: #1e30f3;
-}
+} 
+/* partie média pour la taille d'écran de n'importe quel appareil */
 
-@media (min-width: 576px) {
+@media (min-width: 576px) { /* taille écran minimale */
   .profile {
-    height: 60vw;
-    width: 60vw;
+    height: clamp(80px, 30vw, 150px);
+    width: clamp(80px, 30vw, 150px);
   }
   .profile .profile-img {
-    height: 65vw;
+    height: clamp(80px, 30vw, 150px);
   }
   .profile .dots-1 {
     width: 3vw;
@@ -11659,11 +11774,11 @@ html {
 }
 @media (min-width: 768px) {
   .profile {
-    height: 50vw;
-    width: 50vw;
+    height: clamp(80px, 30vw, 150px);
+    width: clamp(80px, 30vw, 150px);
   }
   .profile .profile-img {
-    height: 55vw;
+    height: clamp(80px, 30vw, 150px);
   }
   .profile .dots-1 {
     width: 3vw;
@@ -11684,11 +11799,11 @@ html {
 }
 @media (min-width: 992px) {
   .profile {
-    height: 40vw;
-    width: 40vw;
+    height: clamp(80px, 30vw, 150px);
+    width: clamp(80px, 30vw, 150px);
   }
   .profile .profile-img {
-    height: 45vw;
+    height: clamp(80px, 30vw, 150px);
   }
   .profile .dots-1 {
     width: 1.5vw;
@@ -11709,11 +11824,11 @@ html {
 }
 @media (min-width: 1200px) {
   .profile {
-    height: 35vw;
-    width: 35vw;
+    height: clamp(80px, 50vw, 150px);
+    width: clamp(80px, 50vw, 150px);
   }
   .profile .profile-img {
-    height: 40vw;
+    height: clamp(80px, 30vw, 150px);
   }
   .profile .dots-1 {
     width: 1.5vw;
