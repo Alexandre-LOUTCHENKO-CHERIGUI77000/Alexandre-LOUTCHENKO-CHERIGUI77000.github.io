@@ -45,7 +45,9 @@
                             <div class="d-flex align-items-center justify-content-between mb-4">
                                 <h2 class="text-primary fw-bolder mb-0">Expérience</h2>
                                 <!-- Download resume button-->
-                                <!-- Note: Set the link href target to a PDF file within your project-->
+                                 <button class="btn btn-primary px-4 py-2" onclick="downloadPDF()">
+                                    Télécharger en PDF
+                                </button>
                             </div>
                             <!-- Carte d'expérience -->
                             <div class="card shadow border-0 rounded-4 mb-5">
@@ -188,25 +190,25 @@
                                  <!-- Liste des langues-->
                                   <div class="mb-0">
                                     <div class="d-flex align-items-center mb-5">
-                                        <img src="assets/earth-png.png" alt="langues" class="icon-langue me-4"/>
+                                        <img src="assets/earth-png.png" alt="langues" class="icon-langue me-4" crossorigin="anonymous"/>
                                         <div class="grand-texte fw-bolder">Langues</div>
                                     </div>
                                     <div class="small-text fw-bolder mb-5">Avec plus de 6 langues parlées de niveau débutant au français dont je suis natif, je perfectionne mes niveaux de langues chaque jour. Voici quelques unes des langues que je dispose :</div>
                                     <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                        <img class="icon-fr" src="assets/Flag_of_France.png" alt="fr"/>
+                                        <img class="icon-fr" src="assets/Flag_of_France.png" alt="fr" crossorigin="anonymous"/>
                                         <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Français ( Natif )</div></div>
-                                        <img class="icon-uk" src="assets/Flag_of_the_United_Kingdom.png" alt="uk"/>
+                                        <img class="icon-uk" src="assets/Flag_of_the_United_Kingdom.png" alt="uk" crossorigin="anonymous"/>
                                         <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Anglais (B2 inter. avancé)</div></div>
                                     </div>
                                     <div class="row row-cols-1 row-cols-md-3">
-                                        <img class="icon-esp" src="assets/Flag_of_Spain.svg.png" alt="esp"/>
+                                        <img class="icon-esp" src="assets/Flag_of_Spain.svg.png" alt="esp" crossorigin="anonymous"/>
                                         <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Espagnol (B2 - inter. av.)</div></div>
-                                        <img class="icon-arabe" src="assets/Drapeau_Ligue_arabe.png" alt="arabe"/>
+                                        <img class="icon-arabe" src="assets/Drapeau_Ligue_arabe.png" alt="arabe" crossorigin="anonymous"/>
                                         <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Arabe ( A2 - élementaire)</div></div>
                                     </div>
                                     <div class="mb-6"> </div>
                                     <div class="hobbies-section">
-                                        <img src="assets/hobbies.png" class="icon-hobbies me-4" alt="Mes hobbies"/>
+                                        <img src="assets/hobbies.png" class="icon-hobbies me-4" alt="Mes hobbies" crossorigin="anonymous"/>
 
                                         <div class="text-container">
                                             <h5 class="titre-hobbies">Mes hobbies</h5>
@@ -217,31 +219,31 @@
 
                                             <div class="hobbies-list">
                                                 <div class="hobby-item">
-                                                    <img class="hobby-jeu" src="assets/toursEchecs.png" alt="Jeux"/>
+                                                    <img class="hobby-jeu" src="assets/toursEchecs.png" alt="Jeux" crossorigin="anonymous"/>
                                                     <div class="text-hobbies text-gradient-hobbies">Jeux</div>
                                                 </div>
                                                 <div class="hobby-item">
-                                                    <img class="hobby-technologies" src="assets/technologies.png" alt="Technologies"/>
+                                                    <img class="hobby-technologies" src="assets/technologies.png" alt="Technologies" crossorigin="anonymous"/>
                                                     <div class="text-hobbies text-gradient-hobbies">Technologies</div>
                                                 </div>
                                                 <div class="hobby-item">
-                                                    <img class="hobby-video" src="assets/videoIAlogo.png" alt="Vidéo"/>
+                                                    <img class="hobby-video" src="assets/videoIAlogo.png" alt="Vidéo" crossorigin="anonymous"/>
                                                     <div class="text-hobbies text-gradient-hobbies">Vidéo</div>
                                                 </div>
                                                 <div class="hobby-item">
-                                                    <img class="hobby-art" src="assets/artpeindre.png" alt="Art"/>
+                                                    <img class="hobby-art" src="assets/artpeindre.png" alt="Art" crossorigin="anonymous"/>
                                                     <div class="text-hobbies text-gradient-hobbies">Art</div>
                                                 </div>
                                                 <div class="hobby-item">
-                                                    <img class="hobby-nature" src="assets/nature.png" alt="Nature"/>
+                                                    <img class="hobby-nature" src="assets/nature.png" alt="Nature" crossorigin="anonymous"/>
                                                     <div class="text-hobbies text-gradient-hobbies">Nature</div>
                                                 </div>
                                                 <div class="hobby-item">
-                                                    <img class="hobby-lecture" src="assets/livre.png" alt="Lecture"/>
+                                                    <img class="hobby-lecture" src="assets/livre.png" alt="Lecture" crossorigin="anonymous"/>
                                                     <div class="text-hobbies text-gradient-hobbies">Lecture</div>
                                                 </div>
                                                 <div class="hobby-item">
-                                                    <img class="hobby-sports" src="assets/sports.png" alt="Sports"/>
+                                                    <img class="hobby-sports" src="assets/sports.png" alt="Sports" crossorigin="anonymous"/>
                                                     <div class="text-hobbies text-gradient-hobbies">Sports</div>
                                                 </div>
                                             </div>
@@ -266,7 +268,11 @@
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
+        <!-- La librairie de canvas pour prendre en capture d'écran ce qui est affiché dans la page-->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        <!-- La librairie js pour le bouton télécharger-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <!-- fichier JS-->
         <script src="js/scripts.js"></script>
     </body>
 </html>

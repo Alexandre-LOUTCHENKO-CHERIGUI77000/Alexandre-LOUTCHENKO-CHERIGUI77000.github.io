@@ -35,3 +35,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+async function downloadPDF() {
+    const { jsPDF } = window.jspdf;
+    const element = document.querySelector("main");
+
+    const canvas = await html2canvas(element, {
+        scale: 2,
+        useCORS: true,
+        allowTaint: true,
+        backgroundColor: "#ffffff"
+    });
+
+    const imgData = canvas.toDataURL("image/jpeg", 0.95);
+
+    const pdf = new jsPDF("p", "mm", "a4");
+
+    const pageWidth = pdf.internal.pageSize.getWidth();
+    const pageHeight = pdf.internal.pageSize.getHeight();
+
+    const imgWidth = pageWidth;
+    const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+    let heightLeft = imgHeight;
+    let position = 0;
+
+    pdf.addImage(imgData, "JPEG", 0, position, imgWidth, imgHeight);
+    heightLeft -= pageHeight;
+
+    while (heightLeft > 0) {
+        position = heightLeft - imgHeight;
+        pdf.addPage();
+        pdf.addImage(imgData, "JPEG", 0, position, imgWidth, imgHeight);
+        heightLeft -= pageHeight;
+    }
+
+    pdf.save("CV_Alexandre_LOUTCHENKO_CHERIGUI.pdf");
+}
