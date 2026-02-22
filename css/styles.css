@@ -11847,3 +11847,85 @@ html {
     left: -2vw;
   }
 }
+
+/* Container principal */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+/* Carte du formulaire */
+.contact-form-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 20px;
+  background: #1c1c1c;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Titre */
+.contact-form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(315deg, #1e90ff, #333333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Champs */
+.contact-form-container input,
+.contact-form-container textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: #2a2a2a;
+  color: white;
+}
+
+/* Focus effet */
+.contact-form-container input:focus,
+.contact-form-container textarea:focus {
+  border: 1px solid #1e90ff;
+  box-shadow: 0 0 5px #1e90ff;
+}
+
+/* Textarea hauteur */
+.contact-form-container textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+/* Bouton */
+.contact-form-container button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  background: linear-gradient(315deg, #1e90ff, #333333);
+  color: white;
+  transition: 0.3s ease;
+}
+
+/* Hover bouton */
+.contact-form-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(30, 144, 255, 0.3);
+}
+
+/* Message succès / erreur */
+#form-message {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
